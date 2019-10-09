@@ -1,0 +1,102 @@
+/*
+*{
+    margin:0;
+    padding:0;
+  } 
+ */
+
+ body{
+     background-color: rgb(126, 214, 241);
+ }
+ 
+ h2 {
+    font-family:Impact;
+    text-align: center;
+    color: blue;
+    font-size:2.5em;
+    
+    
+}
+h3 {
+    text-decoration: underline;
+    color: rgb(199, 17, 17);
+}
+
+h4 {
+    font-family:cursive;
+    color:green;
+    font-size:1em;
+    padding:5px;
+    margin:5px;
+    text-decoration: underline;
+  
+     }
+
+     p, li{
+        font-family: "Helvettica", sans-serif;
+        color:black;
+        font-size:1em;
+        text-align: left;
+        line-height:1em;
+        padding-top:15px;
+      }
+      
+
+#my-img {
+    width: 150px;
+    border:5px ridge red;
+   border-radius: 50%;
+    clear: both;
+}
+
+#main_info {
+    text-align: left;
+    display: inline-block;
+}
+
+
+
+.contant {
+    border:5px ;
+    box-shadow: 0 8px 16px 0 rgba(218, 189, 31, 0.726), 0 6px 20px 0 rgba(43, 151, 16, 0.19);
+    border:1px solid rgb(17, 29, 207);
+    border-radius:5px;
+    position:relative;
+    width:65%; 
+    height:30px
+    
+  }
+  
+  .contant_message {
+    border:5px ;
+    box-shadow: 0 8px 16px 0 rgba(218, 189, 31, 0.726), 0 6px 20px 0 rgba(43, 151, 16, 0.19);
+    border:1px solid rgb(17, 29, 207);
+    border-radius:5px;
+    position:relative;
+    width:65%; 
+  
+ }
+
+ .submit {
+    font-size:20px;
+    font-weight:bold;
+    cursor: grab;
+    background-color:#808184;
+    border:1px solid blue;
+    border-radius:8px;
+    margin:10px;
+  }
+
+  
+.submit:hover{
+    background-color:red;
+    color: white;
+    transition:0.5s;
+    }
+  
+footer {
+    background-color:#808184;
+    color:black;
+    font-size:20px;
+     text-align: center;
+    }
