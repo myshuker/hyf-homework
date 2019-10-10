@@ -1,15 +1,23 @@
-/*
-*{
-    margin:0;
-    padding:0;
-  } 
- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
+header {
+    background-color: aqua;
+    height: 50px;
+    width: 100%;
+}
 
  body{
      background-color: rgb(126, 214, 241);
+     
  }
  
  h2 {
+     padding-top: 15px;
     font-family:Impact;
     text-align: center;
     color: blue;
@@ -28,52 +36,127 @@ h4 {
     font-size:1em;
     padding:5px;
     margin:5px;
+    margin-left: 15px;
     text-decoration: underline;
   
      }
+    
+#big_container {
+    width: 100%;
+    box-sizing: border-box;
+}
 
-     p, li{
+#my_info {
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.719);
+    border-radius: 20px;
+    
+}
+    
+
+#main_info {
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.719);
+    border-radius: 20px;
+    width: 100%;
+    margin-left: 2%;
+    width: 96%;
+    
+    padding-bottom: 15px;
+}
+
+
+#main_info img {
+    width: 140px;
+    border:5px ridge red;
+   border-radius: 50%;
+   float: right;
+   
+}
+
+#main_info ul {
+    text-align: center;
+    
+
+}
+
+#container {
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.719);
+    border-radius: 20px;
+    position: relative;
+    float:right;
+    width: 80%;
+    height: 600px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 2%;
+    box-sizing: border-box;
+
+
+}
+
+#about {
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.719);
+    border-radius: 20px;
+    position: relative;
+    float:left;
+    width: 15%;
+    height: 600px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 2%;
+    box-sizing: border-box;
+}
+
+ p, li{
         font-family: "Helvettica", sans-serif;
         color:black;
         font-size:1em;
         text-align: left;
         line-height:1em;
         padding-top:15px;
+        padding-right:15px;
+        margin-left: 10px;
+
       }
       
 
-#my-img {
-    width: 150px;
-    border:5px ridge red;
-   border-radius: 50%;
+.references {
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.719);
+    border-radius: 20px;
+    position: relative ;
+    margin-bottom: 25px;
+    margin-left: 2%;
+    margin-right: 2%;
     clear: both;
+    padding: 2%;
+    
+
 }
 
-#main_info {
-    text-align: left;
-    display: inline-block;
-}
-
-
-
-.contant {
+.contact {
     border:5px ;
     box-shadow: 0 8px 16px 0 rgba(218, 189, 31, 0.726), 0 6px 20px 0 rgba(43, 151, 16, 0.19);
     border:1px solid rgb(17, 29, 207);
     border-radius:5px;
-    position:relative;
-    width:65%; 
-    height:30px
+    
+    width:60%; 
+    height:30px;
+    margin-left: 20%;
     
   }
   
-  .contant_message {
+  .contact_message {
     border:5px ;
     box-shadow: 0 8px 16px 0 rgba(218, 189, 31, 0.726), 0 6px 20px 0 rgba(43, 151, 16, 0.19);
     border:1px solid rgb(17, 29, 207);
     border-radius:5px;
     position:relative;
-    width:65%; 
+    width:60%; 
+    margin-left: 20%;
   
  }
 
@@ -85,6 +168,7 @@ h4 {
     border:1px solid blue;
     border-radius:8px;
     margin:10px;
+    margin-left: 48%;
   }
 
   
@@ -99,4 +183,8 @@ footer {
     color:black;
     font-size:20px;
      text-align: center;
+    }
+
+    ul, ol {
+        margin-left: 35px;
     }
