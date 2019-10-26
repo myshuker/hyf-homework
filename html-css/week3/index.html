@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Homework week 3 Form</title>
+</head>
+
+<body>
+    
+    <form id="form1" method="post" action="success.html">
+        <div class="pc-tab">
+
+                                    <!-- radio -->
+            
+            <input checked="checked" id="tab1" type="radio" name="pct" />
+            <input id="tab2" type="radio" name="pct" />
+            <input id="tab3" type="radio" name="pct" />
+            <input id="tab4" type="radio" name="pct" />
+            <section>
+                        <!-- First page -->
+                
+                <div class="tab1">
+                    <!-- <h2>First page</h2> -->
+                 <header>
+            <div class="mainhead">
+                          <!-- logo -->
+                   <div id="logo">
+                      <img src="https://images.all-free-download.com/images/graphiclarge/fashion_girl_logo_free_download_6820524.jpg"  alt="logo">
+                  </div>
+                                            <!-- navigation -->
+                   <div class="navigation_menu">
+                       <nav >
+                           <ul>
+                            <li><a href="#Men">Men</a></li>
+                            <li><a href="#Women">Women</a></li>
+                            <li><a href="#Kids" >Kids</a></li>
+                            <li><a href="#Accessories" >Accessories</a></li>
+                            <li><a href="#outlet" >Outlet</a></li>
+                          </ul>      
+                       </nav>
+                       
+                        <input type="search" placeholder="Search ..." >
+                        <button  type="submit">Search</button>
+                  </div>
+                </div>
+
+                           
+                        <h1>Sign up to yourcustomtailor.com</h1>
+                        <p>
+                            We can't wait to help you improve your life-style and gain the attention from people around you! 
+                        </p>
+                        <p>
+                            Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy picking the best offers that match your preferences and style. Every week we will send you a hand-picked selection - we lust need to know a few details about your first.. 
+                        </p>
+
+                        <h3>Step 1/4 - tell us who you are?  </h3>
+                                
+                        <!-- progress bar -->
+                        <h4>Progress</h4>
+                        <progress max="100" value="25"></progress>
+
+                        <p>Nice to meet you. Let's spend a minute to get to know each other? Please enter the following: </p>
+
+                    </header>
+
+                    <div class="inputs">
+                                    
+                        <label for="firstname">First name*</label>
+                        <input type="text" class="input-required" id="firstname" placeholder="Firstname" required>
+
+                        <label for="lastname">Last name*</label>
+                        <input type="text" class="input-required" id="lastname" placeholder="Lastname" required> 
+                    </div>
+            
+                        <div class="country">           
+                             <label for="country">Country*</label>
+                            <select id="country" name="Country" class="input-required" required>
+                                <option value="Select">Select</option>
+                                <option value="Danmark">Danmark</option>
+                                <option value="Tyskland">Tyskland</option>
+                                <option value="Sverige">Sverige</option>
+                                <option value="Norge">Norge</option>
+                                <option value="Finland">Finland</option>
+                            </select>
+                        </div>
+                    <div class="inputs">
+                        <label for="streetaddress">Street address*</label>
+                        <input type="text" class="input-required" id="streetaddress" placeholder="Street address" required> 
+
+                        <label for="postcode">Post code*</label>
+                        <input type="text" maxlength="4" pattern="[0-9]{3,4}" class="input-required" id="postcode" placeholder="0000" required>
+                                                           
+                    </div>
+
+                      <!-- shipping address -->                   
+
+                        <div class="shipping_box">
+                            
+                            <p>
+                                Use the same address for billing and shipping? Uncheck below to fill out a separate shipping address
+                            </p>
+                         </div>
+                        
+                                                
+                      <div>
+                            <label for="toggle-1">Shipping address</label>
+                            <input type="checkbox" id="toggle-1"  >
+
+                        <h3 >Shipping address</h3>
+                            <div class="hiddenaddress">
+                                                                   
+                                <div class="inputs">
+                                                
+                                    <label for="first_name">First name*</label>
+                                    <input type="text" class="input-required" id="first_name" placeholder="Firstname" required>
+
+                                    <label for="last_name">Last name*</label>
+                                    <input type="text" class="input-required" id="last_name" placeholder="Lastname" required> 
+                                </div>
+                        
+                                    <div class="country">           
+                                        <label for="countryy">Country*</label>
+                                        <select id="countryy" name="Country" class="input-required">
+                                            <option value="Select">Select</option>
+                                            <option value="Danmark">Danmark</option>
+                                            <option value="Tyskland">Tyskland</option>
+                                            <option value="Sverige">Sverige</option>
+                                            <option value="Norge">Norge</option>
+                                            <option value="Finland">Finland</option>
+                                        </select>
+                                    </div>
+                                 <div class="inputs">
+                                    <label for="street_address">Street address*</label>
+                                    <input type="text" class="input-required" id="street_address" placeholder="Street address" required> 
+
+                                    <label for="post_code">Post code*</label>
+                                    <input  type="text"  maxlength="4" pattern="[0-9]{3,4}" class="input-required" id="post_code" placeholder="0000" required>
+                                                                                
+                                </div>
+                            </div>
+                        </div>
+                            <div class="Profile_description">
+                                <div class="description">
+                                    <label for="Profile_description">Profile description</label>
+                                    <p>Please provide a short description of yourself to be displayed on our social community pages. </p>
+                                 </div>
+                                <textarea id="Profile_description" name="message" maxlength="500" placeholder="Maximum 500 characters...." rows="8" cols= "25" style="width:100% " ></textarea>
+                                                                        
+                            </div>
+                    
+                    <div class="next_previous">
+                        .
+                        <label for="tab2" id="label2" class="navigation">Next step</label>
+                    </div>
+                </div>
+
+
+<!-- ----------------------------------------------------------------------------------- -->
+
+                <!-- Second Page -->
+
+                
+            <!-- navigation -->
+            
+                <div class="tab2">
+
+                    <!-- <h2>Second page</h2> -->
+
+                    <header>
+                            <div class="mainhead">
+                                    <!-- logo -->
+                             <div id="logo">
+                                <img src="https://images.all-free-download.com/images/graphiclarge/fashion_girl_logo_free_download_6820524.jpg"  alt="logo">
+                            </div>
+                                                      <!-- navigation -->
+                             <div class="navigation_menu">
+                                 <nav >
+                                     <ul>
+                                      <li><a href="#Men">Men</a></li>
+                                      <li><a href="#Women">Women</a></li>
+                                      <li><a href="#Kids" >Kids</a></li>
+                                      <li><a href="#Accessories" >Accessories</a></li>
+                                      <li><a href="#outlet" >Outlet</a></li>
+                                    </ul>      
+                                 </nav>
+                                 
+                                  <input type="search" placeholder="Search ..." >
+                                  <button  type="submit">Search</button>
+                            </div>
+                          </div>
+                          
+                          <h1>Sign up to yourcustomtailor.com</h1>
+                            
+                            <h3>Step 2/4 - how can we reach you?  </h3>
+                                    
+                            <!-- progress bar -->
+                            <h4>Progress</h4>
+                            <progress max="100" value="50"></progress>
+    
+                            <p>We will probably need to stay in touch somehow. Let is know how we can reach you?   </p>
+    
+                        </header>
+    
+                        <div class="inputs_phone">
+                
+                                <div class="phone">
+                                    <label for="phone">Phone</label>
+                                    <input type="number"  id="phone" placeholder="Phone" required> 
+                                 </div>
+                                <div class="email"> 
+                                    <div> 
+                                        <label for="email">EMAIL*</label>
+                                        <input type="email" class="input-required" id="email"  placeholder="....@gmail.com" required> 
+                                    </div>
+
+                                    <div>
+                                        <label for="password">Password*</label>
+                                        <input type="password" class="input-required" id="password" minlength="6"  placeholder="Password" required> 
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="re-password">Re-enter Password*</label>
+                                        <input type="password" class="input-required" id="re-password" minlength="6"   placeholder="Re-enter  Password" required>  
+                                    </div>
+                                 </div>
+                        </div>   
+
+                        <p>
+                            I want to sign up for the newsletter Weekly news 
+                        </p>
+
+                        <div class="newsletter">
+
+                            <label for="Weekly_news">Weekly news</label>
+                                <input type="checkbox" id="Weekly_news">
+
+                                
+                            <label for="Monthly_news">Monthly news</label>
+                                <input type="checkbox" id="Monthly_news">
+
+                            <label for="Dont_send">Don't send me news </label>
+                                <input type="checkbox" id="Dont_send">
+
+                        </div>
+        
+
+                   <div class="next_previous">
+                        <label for="tab1" class="navigation">Previous Step</label>  
+                        <label for="tab3" id="label3" class="navigation">Next Step</label>
+                    </div>
+                </div>
+                
+<!-- ----------------------------------------------------------------------------------- -->
+                    <!-- Third Page -->
+
+                  
+
+                <div class="tab3">
+                    <!-- <h2>Third page</h2> -->
+
+                    <header>
+      
+                            <div class="mainhead">
+                                    <!-- logo -->
+                             <div id="logo">
+                                <img src="https://images.all-free-download.com/images/graphiclarge/fashion_girl_logo_free_download_6820524.jpg"  alt="logo">
+                            </div>
+                                                      <!-- navigation -->
+                             <div class="navigation_menu">
+                                 <nav >
+                                     <ul>
+                                      <li><a href="#Men">Men</a></li>
+                                      <li><a href="#Women">Women</a></li>
+                                      <li><a href="#Kids" >Kids</a></li>
+                                      <li><a href="#Accessories" >Accessories</a></li>
+                                      <li><a href="#outlet" >Outlet</a></li>
+                                    </ul>      
+                                 </nav>
+                                 
+                                  <input type="search" placeholder="Search ..." >
+                                  <button  type="submit">Search</button>
+                            </div>
+                          </div>
+
+                            <h1>Sign up to yourcustomtailor.com</h1>
+                            
+                            <h3>Step 3/4 - Time to learn about your perferences?  </h3>
+                                    
+                            <!-- progress bar -->
+                            <h4>Progress</h4>
+                            <progress max="100" value="75"></progress>
+    
+                            <p>What kind of items are you interested in offer on?   </p>
+    
+                        </header>
+
+                        <div class="items_interested">
+                            <div class="chosse1">
+                                <label for="apparal">Apparal</label>
+                                    <input type="checkbox" id="apparal">
+                                
+                                <label for="accessories">Accessories </label>
+                                    <input type="checkbox" id="accessories">
+                                    
+                            <label for="handbags">Handbags </label>
+                                    <input type="checkbox" id="handbags">
+                            </div>
+                            <div class="chosse2">
+                                <label for="jewelry">Jewelry</label>
+                                    <input type="checkbox" id="jewelry">
+
+                                <label for="shoes">Shoes</label>
+                                    <input type="checkbox" id="shoes">
+                             </div>                          
+                        </div>
+    
+
+                    <!-- <div class="inputs">     -->
+
+                        <!-- add additional html form inputs here...
+                         remember that the required ones each must have the class="input-required" -->
+
+                         <div class="images_container">
+                             <div class="img1">
+                                <div class="images">
+                                <img src="https://s3-ap-southeast-1.amazonaws.com/s3.loopme.ph/img/newos/posts/2x/3376_5YaPMSvnKNN4k4I0_.jpg" alt="men casual shirts "> 
+                                <label for="men_casual_shirts" >Select </label>
+                                    <input type="checkbox" id="men_casual_shirts">
+                                </div>
+                                <div class="images">
+                                <img src="https://i.pinimg.com/736x/1d/d6/1e/1dd61e8a1eb7dcab15580796b4ce6cf8.jpg" alt="women casual shirts "> 
+                                <label for="women_casual_shirts">Select </label>
+                                    <input type="checkbox" id="women_casual_shirts">
+                                </div>
+                                <div class="images">
+                                <img src="https://sc01.alicdn.com/kf/HTB1bj4TOpXXXXcZXXXXq6xXFXXXs/zm21934a-new-fashion-ladies-clothes-v-neck.jpg_350x350.jpg" alt="evineng womwn dress">
+                                <label for="evineng_womwn_dress">Select </label>
+                                    <input type="checkbox" id="evineng_womwn_dress">
+                                </div>
+                                <div class="images">
+                                <img src="https://media.karousell.com/media/photos/products/2018/12/08/new_style_kid_girl_floral_dress_formal_princess_girl_wedding_party_dress_children_girl_summer_fashio_1544253290_694f8ed0_progressive.jpg" alt="girls kids">
+                                <label for="girls_kids">Select </label>
+                                    <input type="checkbox" id="girls_kids">
+                                </div>
+                            </div>
+                            <div class="img2">
+                                <div class="images">
+                                <img src="https://image.dhgate.com/0x0/f2/albu/g7/M00/CD/59/rBVaSlrG-8mAA-fTAARqZJ7h-4w740.jpg" alt="boys kids"> 
+                                <label for="boys_kids">Select </label>
+                                    <input type="checkbox" id="boys_kids">
+                                </div>
+                                <div class="images">
+                                <img src="https://www.dhresource.com/0x0/f2/albu/g6/M01/01/55/rBVaSFuhsNeAOGg6AAWR3eaMJF8183.jpg" alt="accessories for girls"> 
+                                <label for="accessories_for_girls">Select </label>
+                                    <input type="checkbox" id="accessories_for_girls">
+                                </div>
+                                <div class="images">
+                                <img src="https://www.dhresource.com/0x0/f2/albu/g7/M01/CA/91/rBVaSlurNieAUZobAAIdBzKhcmw778.jpg" alt="handbags for girls"> 
+                                <label for="handbags_for_girls">Select </label>
+                                    <input type="checkbox" id="handbags_for_girls">
+                                </div>
+                                <div class="images">
+                                <img src="http://cdn.shopify.com/s/files/1/0627/5517/products/chrono_s_blue_brown_1_1024x1024.jpg?v=1567122358" alt="watches"> 
+                                <label for="watches">Select </label>
+                                    <input type="checkbox" id="watches">
+                                </div>
+                            </div>
+                         </div>
+                        
+                    <!-- </div> -->
+                    <div class="next_previous">
+                        <label for="tab2" class="navigation">Previous Step</label>
+                        <label for="tab4" id="label4" class="navigation">Next Step</label>
+                     </div>
+                 </div>
+
+<!-- ----------------------------------------------------------------------------------- -->
+
+                <!-- Fourth Page -->
+
+                <div class="tab4">
+                    <!-- <h2>Fourth page</h2> -->
+
+                    <header>
+                            <div class="mainhead">
+                                    <!-- logo -->
+                             <div id="logo">
+                                <img src="https://images.all-free-download.com/images/graphiclarge/fashion_girl_logo_free_download_6820524.jpg"  alt="logo">
+                            </div>
+                                                      <!-- navigation -->
+                             <div class="navigation_menu">
+                                 <nav >
+                                     <ul>
+                                      <li><a href="#Men">Men</a></li>
+                                      <li><a href="#Women">Women</a></li>
+                                      <li><a href="#Kids" >Kids</a></li>
+                                      <li><a href="#Accessories" >Accessories</a></li>
+                                      <li><a href="#outlet" >Outlet</a></li>
+                                    </ul>      
+                                 </nav>
+                                 
+                                  <input type="search" placeholder="Search ..." >
+                                  <button  type="submit">Search</button>
+                            </div>
+                          </div>
+
+                            <h1>Sign up to yourcustomtailor.com</h1>
+                            
+                            <h3>Step 4/4 - Payment  </h3>
+                                    
+                            <!-- progress bar -->
+                            <h4>Progress</h4>
+                            <progress max="100" value="100"></progress>
+
+                                                    <p>Please fill in your payment data: </p>
+                        </header>
+
+                   
+                    <div class="inputs">            
+
+                         <div>
+                             <label for="name_of_card">Name on card*</label>
+                                 <input type="text" class="input-required" id="name_of_card" placeholder="Name on card" required> 
+                         </div>    
+                         <div class="card_type">                
+                             <label for="card_type">Card Type</label>
+                             <select name="card type" id="card_type" class="input-required">
+                                        <option value="Select">Select</option>
+                                        <option value="Danmark">Master Card</option>
+                                        <option value="Tyskland">Visa</option>
+                                        <option value="Sverige">Visa Elctron</option>
+                                        <option value="Norge">PayPal Cash</option>
+                                        <option value="Finland">Visa Dankort</option>
+                                    </select>    
+                         </div>       
+                         <div>
+                            <label for="Credit_card_number">Credit card number*</label>
+                                <input type="number" class="input-required" id="Credit_card_number" placeholder="0000 0000 0000 0000" required> 
+
+                            <label for="firstnamee">First name*</label>
+                                <input type="text" class="input-required" id="firstnamee" placeholder="First name" required> 
+
+                         </div>      
+                        <div class="expiry_date">
+                             <label >Expiry month*</label>
+                               <!-- <input type="number" class="input-required" min="1" max="12" id="expiry_month" placeholder=" month" required>  -->
+
+                                <div class="month" >
+                                        <select name="Month">
+                                          <option value="january">January</option>
+                                          <option value="february">February</option>
+                                          <option value="march">March</option>
+                                          <option value="april">April</option>
+                                          <option value="may">May</option>
+                                          <option value="june">June</option>
+                                          <option value="july">July</option>
+                                          <option value="august">August</option>
+                                          <option value="september">September</option>
+                                          <option value="october">October</option>
+                                          <option value="november">November</option>
+                                          <option value="december">December</option>
+                                        </select>
+                                      </div>
+
+
+                             <label >Expiry year*</label>
+                                <!-- <input type="number" class="input-required" min="2019" max="2050" id="expiry_year" placeholder=" year" required>  -->
+
+                                <div class="year">
+                                        <select name="Year">
+                                          
+                                          <option value="2019">2019</option>
+                                          <option value="2020">2020</option>
+                                          <option value="2021">2021</option>
+                                          <option value="2022">2022</option>
+                                          <option value="2023">2023</option>
+                                          <option value="2024">2024</option>
+                                          <option value="2016">2025</option>
+                                          <option value="2017">2026</option>
+                                          <option value="2018">2027</option>
+                                        </select>
+                                      </div>
+
+                         </div>
+                         <div class="cvv">
+                            <label for="cvv">CVV*</label>                               
+                                <input type="number" min="100" max="999"  step="1" class="input-required" id="cvv" placeholder="000" required>
+                                <p>3 or 4 digits usually found on the signature strip</p>
+                        </div>
+                        <input class="submit" type="submit" id="submit">
+
+                    </div>
+                    <div class="next_previous">
+                        <label for="tab3" class="navigation">Previous Step</label>
+                       .
+                     </div>
+                </div>
+            </section>
+        </div>
+    </form>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

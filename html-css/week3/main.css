@@ -1,0 +1,385 @@
+/* Component Needs */
+
+.pc-tab>input,
+.pc-tab section>div {
+    display: none;
+}
+
+#tab1:checked~section .tab1,
+#tab2:checked~section .tab2,
+#tab3:checked~section .tab3,
+#tab4:checked~section .tab4 {
+    display: block;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html, * {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    }
+
+   
+body {
+    -webkit-font-smoothing: antialiased;
+    background: #ecf0f1;
+        
+}
+
+
+progress {
+   
+    border: 1px solid #000;
+    border-radius: 5px;  
+    width: 100%;
+    height: 25px;
+    margin: 15px auto;
+
+    }
+
+    progress[value]::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+      }
+
+      progress[value]::-webkit-progress-value {
+        background-image:
+             -webkit-linear-gradient(-45deg, 
+                                     transparent 33%, rgba(0, 0, 0, .1) 33%, 
+                                     rgba(0,0, 0, .1) 66%, transparent 66%),
+             -webkit-linear-gradient(top, 
+                                     rgba(255, 255, 255, .25), 
+                                     rgba(0, 0, 0, .25)),
+             -webkit-linear-gradient(left, #09c, #f44);
+      
+          border-radius: 2px; 
+          background-size: 35px 20px, 100% 100%, 100% 100%;
+      }
+
+      progress[value]::-webkit-progress-value::before {
+        content: '80%';
+        position: absolute;
+        right: 0;
+        top: -125%;
+      }
+
+h1 {
+    text-align: center;
+    /* font-weight: 100; */
+    font-size: 30px;
+    color: #e74c3c;
+}
+
+h3 , h4{
+    margin-left: 15px ;
+
+}
+#logo img {
+    width:110px;
+    height:110px;
+    border-radius: 50%;
+
+}
+.mainhead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation_menu{
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    width: 55%;
+    padding-top: 25px;
+   
+}
+
+li {
+    margin: 10px;
+}
+
+button {
+    background: red;
+   
+    height: 30px;
+    width: 55px;
+    padding: 0;
+    cursor: pointer;
+    margin-top:6px ;
+ }
+
+header p {
+    padding: 15px;
+    width: 100%;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pc-tab {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.pc-tab ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;    
+}
+
+.pc-tab label.navigation   {
+    background: coral;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 0;
+    cursor : pointer;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 130px;
+}
+
+
+
+.inputs, .shipping_box, .hiddenaddress, .Profile_description {
+   width: 100%;
+}
+
+.next_previous {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 70px;
+
+    
+}
+
+.inputs  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center;
+    /* align-content: space-between; */
+    margin-left: 20px;
+    
+}
+
+.inputs_phone {
+    display: flex;
+    align-items: flex-start;
+   
+}
+
+.inputs input {
+    width: 35%;
+    height: 35px;
+    margin: 5px auto;
+    border-radius: 4px;
+    
+ }
+
+ input:invalid {
+    color: red;
+ }
+ select {
+    width: 30%;
+    height: 35px;
+    margin-left:15px
+} 
+.country {
+    margin-left: 20px;
+}
+
+.shipping_box { 
+    margin-top: 30px;
+}
+
+input[type="checkbox"]{
+    width: 25px; 
+    height: 25px; 
+    cursor: pointer;
+  } 
+ 
+ /* Toggled State */
+
+ input[type=checkbox]:checked ~ div {
+    display: none;
+
+    }
+
+.shipping_box p, .tab2 p {
+    margin: 10px ;
+    margin-left: 15px;
+
+}
+.expiry_date {
+    display: inline-block;
+    
+}
+
+.month, .year {
+   display: contents;
+}
+.tab4 input{
+    width: 30%; 
+    
+       
+}
+.shipping_box label{
+    margin: 10px;
+      
+}
+
+.email, .phone {
+    display: block;
+  
+     
+} 
+.phone {
+    order: 2;
+    /* text-align: center; */
+   }
+   
+.email {
+    order: 1;
+    text-align: right;
+}
+
+.email input, .phone input {
+    height: 35px;
+}
+.items_interested {
+    display:flex;
+    
+}
+.chosse1, .chosse2 {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-left: 20px;
+  
+}
+
+.chosse1 label, .chosse2  label {
+    margin: 5px;
+} 
+.img1 , .img2 {   
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: 5px;
+        
+}
+
+.images img {
+   
+    width:150px;
+    height: 150px;
+    border: 1px solid rgb(180, 20, 20);
+}
+
+
+label {   
+    font-weight: bold;
+    font-size: 15px;    
+        
+}
+
+.Profile_description {
+    display: flex;
+}
+
+.description {
+    width: 30%;
+    font-size: 12px;
+    padding: 0;
+}
+
+
+.Profile_description p{
+padding-top: 10px;
+}
+
+
+.cvv {
+    margin-left: 60px;
+}
+
+
+#tab1:checked ~ nav .tab1 label,
+#tab2:checked ~ nav .tab2 label ,
+#tab3:checked ~ nav .tab3 label , 
+#tab4:checked ~ nav .tab4 label {
+    background: #fff;
+    position: relative;
+}
+
+#tab1:checked ~ nav .tab1 label:after,
+#tab2:checked ~ nav .tab2 label:after,
+#tab3:checked ~ nav .tab3 label:after,
+#tab4:checked ~ nav .tab4 label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    bottom: -1px;
+}
+
+section div {
+    padding: 5px;
+    width: 100%;
+    /* border: 1px solid #ddd; */
+    background: #fff;
+    margin-left: 10px;
+}
+
+section div h2 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+button {
+    background: none;
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+
+.submit {
+     font: bold 16px 'Bitter', sans-serif;
+}
+  .submit:hover{
+     color: rgb(175, 13, 13);
+    transition:0.5s;
+    font-size:20px;
+    /* transform: translate3D(0,50%,0); */
+    background: #259f6c;
+    border-radius: 10px;
+    }
+
+
+@media only screen and (max-width: 600px) {
+    .pc-tab ul {
+       flex-direction: column;
+    }
+    .pc-tab li {
+        width: 100%;
+     }
+
+    label:after {
+        height : 0px !important;
+    }
+  }
