@@ -2,3 +2,4 @@ france
 germany
 italy
 belgium
+portugal
