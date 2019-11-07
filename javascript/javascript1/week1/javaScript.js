@@ -15,9 +15,10 @@
         // ---------------------------------------------------
                 //A dog age calculator :
         
-        let dogYearOfBirth = 2017; //type of variable is number.
-        let dogYearFuture = 2027; //type of variable is number.
-        let shouldShowResultInDogYears= true; //type of variable is boolean.
+        let dogYearOfBirth = 2010; //type of variable is number.
+        let dogYearFuture = 2035; //type of variable is number.
+        let shouldShowResultInDogYears= false; //type of variable is boolean.
+        let humanYears;
         
         let dogYear = dogYearFuture - dogYearOfBirth
         
@@ -25,7 +26,7 @@
         
         switch(shouldShowResultInDogYears){
             case true :
-                    console.log("Your dog will be "+ dogYear + " human years old in " + dogYearFuture )
+                    console.log("Your dog will be "+ humanYears + " human years old in " + dogYearFuture )
         
                     break;
              case false:
@@ -37,7 +38,7 @@
                     // log out :
          
         if (shouldShowResultInDogYears) {
-            console.log("Your dog will be "+ dogYear + " human years old in " + dogYearFuture )
+            console.log("Your dog will be "+ humanYears + " human years old in " + dogYearFuture )
         }       else {
             console.log("Your dog will be "+ dogYear + " dog years old in " + dogYearFuture )
         }
