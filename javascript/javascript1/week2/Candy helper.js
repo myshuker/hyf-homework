@@ -1,5 +1,5 @@
 //Candy helper
-
+// im still work on it ...sorry
 let boughtCandyPrices = [];
 let price;
 function addCandy(candyType, weight){

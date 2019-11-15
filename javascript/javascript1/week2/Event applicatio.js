@@ -1,5 +1,5 @@
 //Event application Calculater
-
+// this also not finished yet.....sorry
 function getEventWeekday(xDays){
 // creating an array with days of the week
     const arrDays =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
