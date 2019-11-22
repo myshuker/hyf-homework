@@ -85,7 +85,7 @@ console.log(searchedSong);
 
 
 
-        //Create our own playlist
+     //Create our own playlist
 
   const myOwnPlaylist = [];
 function addSongToMyPlaylist(title)  {
@@ -99,4 +99,4 @@ console.log(myOwnPlaylist);
 
 
 
-// Improving our application optional ----------I dont understand it..... sorry
+// Improving our application optional -----------I dont understand it..... sorry
