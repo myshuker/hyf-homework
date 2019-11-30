@@ -127,7 +127,6 @@ if (command.includes("What") && command.includes("favorite") ) {
 if (command.includes('Set' && 'timer')) {
 
                 let  Xtimer;
-
                 function myFunction() {
                   let setTime = commandSplit[4];   // the index of time number in command
                   let toMilliSecond = setTime*1000 // time in milliseconds
