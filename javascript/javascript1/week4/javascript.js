@@ -84,7 +84,7 @@ if (command.includes("What" && "today") ) {
     //console.log(`${date}. of ${month} ${year}`); 
 }
          // - 8 -  Calculator simple math.
-if (command.includes(' ')) {
+if (command.includes('+') || command.includes('*') || command.includes('-') || command.includes('/')) {
  number.push(commandSplit[2])
  let xAsString =  commandSplit[2];
  let yAsString = commandSplit[4];
@@ -127,9 +127,11 @@ if (command.includes("What") && command.includes("favorite") ) {
 if (command.includes('Set' && 'timer')) {
         
         let setTime = commandSplit[4];   // the index of time number in command
-        let toMilliSecond = setTime*60*1000 // time in milliseconds
+        let toMilliSecond = setTime*1000 // time in milliseconds
         let myFunction = function() {           // this function to execute the command when 4 min pssed 
-                return('Timer done');
+                //return('Timer done');
+                console.log("timer done");
+                
               }         
         return setTimeout( myFunction, toMilliSecond)  ;
 } 
@@ -175,7 +177,7 @@ return (`This week you have ${calendar.length} event: ${date}. of ${monthAsStrin
 } 
 
 } 
-  console.log(getReply(""));
+/*   console.log(getReply(""));
   console.log(getReply("How are you?"));
   console.log(getReply("Hello my name is Benjamin"));
   console.log(getReply("Hello my name is Mohammad"));
@@ -185,14 +187,14 @@ return (`This week you have ${calendar.length} event: ${date}. of ${monthAsStrin
   console.log(getReply("Add singing in the shower to my todo"))
   console.log(getReply("Remove fishing from my todo"))
   console.log(getReply("What is on my todo?"))
-  console. log(getReply("What day is it today?"))
-  console.log(getReply("what is 4 + 3")) ;
-  console.log(getReply("what is 7 - 3"));
-  console.log(getReply("what is 7 * 3")) ;
-  console.log(getReply("what is 15 / 3")) ;  
-  console.log(getReply("My favorite dish is kebab"))
-  console.log(getReply("What is my favorite dish"))
-  console.log(getReply("Set a timer for 4 minutes")) 
-  console.log(getReply("Add Bike ride the 29/11/2019 to my calendar"));
-  console.log(getReply("What am I doing this week?"));
-       
+  console. log(getReply("What day is it today?")) */
+  //console.log(getReply("what is 4 + 3")) ;
+  //console.log(getReply("what is 7 - 3"));
+  //console.log(getReply("what is 7 * 3")) ;
+//console.log(getReply("what is 15 / 3")) ;  
+ // console.log(getReply("My favorite dish is kebab"))
+ // console.log(getReply("What is my favorite dish"))
+  console.log(getReply("Set a timer for 6 minutes")) 
+  //console.log(getReply("Add Bike ride the 29/11/2019 to my calendar"));
+  //console.log(getReply("What am I doing this week?"));
+        
