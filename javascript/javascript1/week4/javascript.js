@@ -125,15 +125,21 @@ if (command.includes("What") && command.includes("favorite") ) {
 }
          // - 11 - Set a timer for 4 minutes
 if (command.includes('Set' && 'timer')) {
-        
-        let setTime = commandSplit[4];   // the index of time number in command
-        let toMilliSecond = setTime*1000 // time in milliseconds
-        let myFunction = function() {           // this function to execute the command when 4 min pssed 
-                //return('Timer done');
-                console.log("timer done");
-                
-              }         
-        return setTimeout( myFunction, toMilliSecond)  ;
+
+                let  Xtimer;
+
+                function myFunction() {
+                  let setTime = commandSplit[4];   // the index of time number in command
+                  let toMilliSecond = setTime*1000 // time in milliseconds
+
+                  Xtimer = setTimeout(alertFunc, toMilliSecond);
+                } 
+                myFunction() ;
+                function alertFunc() {
+                 console.log(("Timer done"));
+                // return ("Timer done");
+                }
+
 } 
         // - 12 - Add Bike ride the 3/5/2019 to my calendar
 if (command.startsWith('Add') && command.includes('my calendar')) {
