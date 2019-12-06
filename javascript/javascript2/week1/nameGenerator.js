@@ -1,21 +1,45 @@
 // Spirit animal name generator
 
+const p = document.querySelector("p"); // grab the p element where show the name appear
+const input = document.getElementById("inputName"); // grab the input text
+const btn = document.querySelector("button"); // grab the btn
+
+// make a function  that will return the input name
+function clickOne(){
+  const inputText = input.value;
+  //console.log((input.value));
+  if (inputText !== ""){                   // if the input wasn't empty
+     // p.textContent = inputText + "-" + item;
+    
+     const newName =   p.textContent       // New spirit animal
+
+      p.textContent = (`${inputText} - ${item} `) ;
 
 
 
 
 
-//let myP = document.createElement('p');
+} else {                                      // if the input was empty
+  p.textContent = ("Please Write Your Name")
+}
+}
 
+btn.addEventListener("click", clickOne);
 
-
-const SpiritName = document.querySelector("#recive");              // call the element with  his id
-let myPText = document.createTextNode('animal name generator');    // create  text
-
-SpiritName.appendChild(myPText);                                   // insert the replay in the parent               
-
-button.addEventListener("click", function(event) {
-    console.log(event);
-    if (input.type === "text") input.type = "password";
-    else input.type = "text";
-  });
+// Spirit animal part
+// create an array of  Spirit animal names
+const spiritAnimalList = [
+  "Falcon",
+  "Deer",
+  "Owl",
+  "Snake",
+  "Woodpecker",
+  "Alligator",
+  "Bat",
+  "Buffalo",
+  "Spider",
+  "Sheep"
+];
+let item =
+  spiritAnimalList[Math.floor(Math.random() * spiritAnimalList.length)]; // create a random item from the array
+// console.log(item);  // test it  :wink:
