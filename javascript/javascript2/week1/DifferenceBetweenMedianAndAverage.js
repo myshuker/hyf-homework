@@ -34,7 +34,7 @@ let arrayLength = housePrices.length;
 
 if (arrayLength % 2 === 1){    // find the middle number in the array  If the number of the element in array are odd 
 
-const theMedian1 = (arrayLength+1)/2 
+const theMedian1 = (arrayLength-1)/2 
 const median = housePrices[theMedian1]     // find the median 
 console.log(median);
 
@@ -44,13 +44,13 @@ console.log(median);
 else {
 
 // The middle two numbers here are (housePrices.length/2) and (housePrices.length/2 +1):
-const theFirstMiddle = arrayLength/2 ;
-const theSecondMiddle = arrayLength/2 +1 ;
+const x = arrayLength/2 ;
+const y = arrayLength/2 +1 ;
 
-const firstValue = housePrices[theFirstMiddle];
-const secondtValue = housePrices[theSecondMiddle];
+const firstValue = housePrices[x];
+const secondValue = housePrices[y];
 
-const theMedian2 = Math.round((firstValue+secondtValue)/2);
+const theMedian2 = Math.round((firstValue+secondValue)/2);
 
 console.log(theMedian2);
 }
