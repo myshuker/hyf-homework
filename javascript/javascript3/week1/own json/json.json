@@ -1,0 +1,17 @@
+[{
+    "optionOne" : "Math",
+    "optionTwo":"Coding",
+    "optionTree": {
+        "ComputerOS":["windows", "Linux"], 
+        "Coding": ["HTML","CSS","JAVASCRIPT","NODE"],
+        "Designing":["AutoCad","SolidWorks", "PhotoShop","360Fusion"],
+        "Others":"3D Printing"
+    },
+    "optionFour":["Electronics", "PLC"]
+},
+{
+    "music" : "guitar",
+    "Tv": "null",
+    "youtube" :"true"
+
+}]
