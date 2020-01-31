@@ -15,15 +15,15 @@ from task
 where due_date IS NULL;
 
 --3 Find all the tasks that are marked as done
-Select titel, name  
+Select title, name  
 from task  
-inner join status on ttask.status_id = status.id
+inner join status on task.status_id = status.id
 where name ='Done'
 
 -- 4 Find all the tasks that are not marked as done
-Select titel, name  
+Select title, name  
 from task  
-inner join status on ttask.status_id = status.id
+inner join status on task.status_id = status.id
 where name !='Done'
 -- 5 Get all the tasks, sorted with the most recently created first
 SELECT * 
