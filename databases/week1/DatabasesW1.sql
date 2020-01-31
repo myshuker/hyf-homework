@@ -1,6 +1,6 @@
 
 -- Note: 
--- I write here all the nams of columns as just the name without relatedt it to the his table, just to know I can write it as thet in the future coz its the first task for us
+-- I write here all the nams of columns as just the name without related it to his tables, just to know I can write it as that in the future coz its the first task for us
 -- but for exaple : I can write instad of 
                                       -- :(Select title) => ( Select  task.title) 
                                       -- :(Select name) => ( Select  status.name)....etc
