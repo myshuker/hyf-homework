@@ -10,7 +10,7 @@ CREATE TABLE `meal` (
   `title` varchar(255) NOT NULL,
   `description` text NULL DEFAULT NULL,
   `location` varchar(255) NOT NULL,
-  `when` DATETIME NOT NULL,
+  `meal_when` DATETIME NOT NULL,
   `max_recervation` int(10) unsigned NOT NULL,
   `price` decimal,
   `create_date` DATETIME NOT NULL,
@@ -40,4 +40,15 @@ CREATE TABLE `meal` (
   CONSTRAINT `fk_review_meal` FOREIGN KEY (`meal_id`) REFERENCES `meal`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
  
+ -- add meals:
+ insert into `meal` (id, title, description, location, meal_when, max_recervation, price, created_date ) 
+ values (1, 'meal1', 'meal1_description.', 'meal1_location', '2017-10-15 13:05:09' , 3, 99,'2017-10-15 13:05:09');
+insert into `meal` (id, title, description, location, meal_when, max_recervation, price, created_date ) 
+ values (2, 'meal2', 'meal2_description.', 'meal2_location', '2017-10-15 13:05:09' , 1, 599,'2017-10-15 13:05:09');
+ insert into `meal` (id, title, description, location, meal_when, max_recervation, price, created_date ) 
+ values (3, 'meal3', 'meal3_description.', 'meal3_location', '2017-10-15 13:05:09' , 5, 199,'2017-10-15 13:05:09');
+ insert into `meal` (id, title, description, location, meal_when, max_recervation, price, created_date ) 
+ values (4, 'meal4', 'meal4_description.', 'meal4_location', '2017-10-15 13:05:09' , 7, 69,'2017-10-15 13:05:09');
+ insert into `meal` (id, title, description, location, meal_when, max_recervation, price, created_date ) 
+ values (5, 'meal5', 'meal5_description.', 'meal5_location', '2017-10-15 13:05:09' , 2, 245,'2017-10-15 13:05:09');
  
