@@ -150,7 +150,15 @@ SELECT * FROM meal where price < 200
 
 --Get meals that still has available reservations
 
-SELECT * FROM meal  WHERE max_reservation IS NOT NULL;
+SELECT * FROM meal  WHERE max_reservation IS NOT NULL; // dont know if its correct...
+
+-- or ....
+
+SELECT meal.title , meal.max_reservations ,reservation.number_of_guests 
+FROM reservation 
+JOIN meal 
+ON reservation.meal_id = meal.id
+where reservation.number_of_guests < meal.max_reservations;
 
 --Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT * FROM meal like '%Rød grød med%' ;
