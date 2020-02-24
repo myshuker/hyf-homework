@@ -149,7 +149,7 @@ insert into `meal` (id, title, description, location, meal_when, max_reservation
 SELECT * FROM meal where price < 200
 
 --Get meals that still has available reservations
-
+/*
 SELECT * FROM meal  WHERE max_reservation IS NOT NULL; // dont know if its correct...
 
 -- or ....
@@ -159,6 +159,15 @@ FROM reservation
 JOIN meal 
 ON reservation.meal_id = meal.id
 where reservation.number_of_guests < meal.max_reservations;
+--
+*/
+SELECT  meal.*,
+    SUM(reservation.number_of_guests) AS number_of_guests
+FROM reservation
+ JOIN meal 
+ ON reservation.meal_id = meal.id
+GROUP BY meal.id
+HAVING SUM(reservation.number_of_guests) < meal.max_recervation ;
 
 --Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 SELECT * FROM meal like '%Rød grød med%' ;
