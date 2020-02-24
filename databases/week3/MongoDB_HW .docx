@@ -1,4 +1,4 @@
-
+﻿
 --MongoDB Exercise one
 -- 1-Create a database "Todo"
 use Todo 
@@ -21,7 +21,8 @@ db.user.insert([{"name": "Aarika Ellingworth", "email": "aellingworth0@harvard.e
 
 -- to show user collections :
 > show collections
-user
+user  
+
 
 -- to show users :
 > db.user.find()
