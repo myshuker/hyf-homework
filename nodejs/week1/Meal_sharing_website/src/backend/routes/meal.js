@@ -11,7 +11,6 @@ const getMeal = function(req, res) {
       return review;
     }
   });
-  // const randomMealWithReview =
   res.json([randomMeal, randomMealReview]);
 };
 
