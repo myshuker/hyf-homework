@@ -3,10 +3,10 @@ const jsonReview = require("../data/reviews.json");
 
 function getMeals(req, res) {
   const reviewMatchId = jsonMeals.forEach(item => {
-    item.review = [];
+    item.reviews = [];
     jsonReview.forEach(element => {
       if (item.id == element.mealId) {
-        item.review.push(element);
+        item.reviews.push(element);
       }
     });
   });
