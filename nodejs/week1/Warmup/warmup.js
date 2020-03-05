@@ -1,6 +1,4 @@
-
 // Circle calculator
-
 class Circle {
         constructor(radius) {this.radius = radius;}
     getDiameter (){return 2 * this.radius;}
@@ -11,7 +9,3 @@ const circle = new Circle(10);
 console.log("getDiameter :", circle.getDiameter());
 console.log("getCircumference :", circle.getCircumference());
 console.log("getArea :", circle.getArea());
-
-
-
-
