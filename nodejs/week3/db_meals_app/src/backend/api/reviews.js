@@ -3,21 +3,22 @@ const app = express();
 const router = express.Router();
 const pool = require("./../database");
 
+// Get all reviews
 router.route("/")
-  .get((request, response) => {
-    const query = pool.query("SELECT * FROM reviews", (error, results, fields) => {
-        if (error) {
-          response.status(404).json({
-            msg: "Check Query",
-            Query: query.sql
-          });
-        }
-        console.log("Query :", query.sql);
-        response.send(results);
+.get((request, response) => {
+  const query = pool.query("SELECT * FROM reviews", (error, results, fields) => {
+      if (error) {
+        response.status(404).json({
+          msg: "Check Query",
+          Query: query.sql
+        });
       }
-    );
-  })
-
+      console.log("Query :", query.sql);
+      response.send(results);
+    }
+  );
+})
+ // insert new review
   .post((request, response) => {
     //  const meal = new meal(request.body)
     const {title, description, location, meal_when, max_reservation, price, created_date} = request.body;
@@ -37,15 +38,16 @@ router.route("/")
             Query: query.sql
           });
         }
-        response.status(201).json(results);
+        console.log("Query :", query.sql);
+       response.status(201).json(results);
       }
     );
   });
-
+   // Get one review with id
 router.route("/:id")
       .get((request, response) => {
         const id = request.params.id;
-        const query = pool.query("SELECT * FROM reviews where id ?", id,(error, results, fields) => {
+        const query = pool.query("SELECT * FROM reviews where id = ?", id,(error, results, fields) => {
             if (error) {
               response.status(404).json({
                 msg: "Check Query",
@@ -53,13 +55,15 @@ router.route("/:id")
               });
             }
             console.log("Query :", query.sql);
-            response.status(201).send(`meal with id : ${id} Added` );
+            response.json(results);
           }
         );
       })
+      //Update reviews
       .put((request, response) => {
         const id = request.params.id;
-        const query = pool.query("UPDATE reviews SET title = 'new_name_review'  WHERE id = ? ", id,(error, results, fields) => {
+        const {title, description, location, meal_when, max_reservation, price, created_date} = request.body;
+        const query = pool.query("UPDATE reviews SET ?  WHERE id = ? ", [{title, description, location, meal_when, max_reservation, price, created_date},id],(error, results, fields) => {
             if (error) {
               response.status(404).json({
                 msg: "Check Query",
@@ -71,6 +75,7 @@ router.route("/:id")
           }
         );
       })
+  // Delete one review with id
       .delete((request, response) => {
         const id = request.params.id;
         const query = pool.query("DELETE FROM reviews where id ?", id,(error, results, fields) => {
@@ -82,8 +87,7 @@ router.route("/:id")
             }
             console.log("Query :", query.sql);
             response.status(201).send(` review with id : ${id} Removed` );
-          }
-        );
+          });
       })
 
 
