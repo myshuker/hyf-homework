@@ -1,17 +1,19 @@
 const jsonMeals = require("../data/meals.json");
 const jsonReview = require("../data/reviews.json");
 
-const getMeal = function(req, res) {
-  let randomMealNumber = Math.floor(Math.random() * jsonMeals.length);
-  const randomMeal = jsonMeals[randomMealNumber];
-  const x = randomMeal.id;
+const getRandomMeals = (req, res) => {
+  const randomNumber = Math.ceil(Math.random() * jsonMeals.length);
+  const randomMeal = jsonMeals[randomNumber];
 
-  const randomMealReview = jsonReview.filter(review => {
-    if (randomMeal.id == review.mealId) {
+  randomMeal.review = jsonReview.filter(review => {
+    if (review.mealId === randomMeal.id) {
       return review;
+    } else {
+      return;
     }
   });
-  res.json([randomMeal, randomMealReview]);
+
+  res.json({ randomMeal });
 };
 
-module.exports = getMeal;
+module.exports = getRandomMeals;
