@@ -15,3 +15,24 @@ function getMeals(req, res) {
 }
 
 module.exports = getMeals;
+
+// another solution 
+
+// const jsonMeals = require("../data/meals.json");
+// const jsonReview = require("../data/reviews.json");
+
+// const getMeals = (req, res) => {
+  
+//   const mealReviews = jsonMeals.map(meal => {
+//     return {
+//       ...meal,
+//       review: jsonReview.filter(review => review.mealId === meal.id)
+//     };
+//   });
+//   res.json(mealReviews);
+// };
+
+
+// module.exports = getMeals;
+ 
+
