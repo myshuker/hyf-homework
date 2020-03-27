@@ -1,26 +1,39 @@
 const express = require("express");
 const app = express();
-
-app.get("/", (request, response) => {
-  response.send(`<h1>Hello World</h1>`);
-});
-
-app.get("/numbers/add", (request, response) => {
-  let num1 = parseInt(request.query.first);
-  let num2 = parseInt(request.query.second);
-  let sum = num1 + num2;
-  response.send(`${num1} + ${num2}  = ${sum}`);
-});
-
-app.get("/numbers/multiply/:num1/:num2", (request, response) => {
-  let num1 = Number(request.params.num1);
-  let num2 = Number(request.params.num2);
-  let multiply = num1 * num2;
-  response.send(`${num1} * ${num2}  = ${multiply}`);
-});
-
 const port = 3000;
-app.listen(port, () => {
-  console.log(`Server is Starting on port : ${port}`);
+
+app.get("/", function(req, res) {
+  res.send(`
+    <body>
+        <h1>Home Page</h1>
+     </body>
+  `);
 });
+
+app.get("/numbers/add?", function(req, res) {
+  const first = Number(req.query.first);
+  const second = Number(req.query.second);
+  console.log(req.query);
+  // res.send(req.query)
+
+  res.send(`
+    <h1>Home Page</h1>
+    <h1>sum:</h1>  
+     <h2> ${first} + ${second} = ${first + second} </h2>
+    `);
+});
+
+app.get("/numbers/multiply/:first/:second", function(req, res) {
+  const first = req.params.first;
+  const second = req.params.second;
+  res.send(`
+    <h1>Calculator Page</h1>
+    <h1>multiply:</h1>  
+     <h2> ${first} * ${second} = ${first * second} </h2>
+    `);
+});
+
+const listen = () => console.log(`server run in port : ${port}`);
+
+app.listen(port, listen);
 
