@@ -34,3 +34,23 @@ module.exports = router;
 //   }
 // }
 // module.exports = getReviews;
+
+
+// or 
+const jsonReviews = require("../data/reviews.json");
+// const express = require("express");
+// const router = express.Router();
+
+// router.get("/", (req, res) => {
+//   res.json(jsonReviews);
+// });
+
+// router.get("/:id", (req, res) => {
+//   const id = req.params.id;
+//   // res.send(id)
+//   const reviewsById = jsonReviews.filter(review => review.id == id);
+//   res.json(reviewsById);
+// });
+
+// module.exports = router;
+
