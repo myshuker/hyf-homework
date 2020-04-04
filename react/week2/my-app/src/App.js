@@ -60,6 +60,7 @@ class GetTodoList extends React.Component {
     /*  style={{ textDecorationLine: 'line-through' }} */
   };
 
+ // this code is not completed
   toDelete = (item) => {
     console.log("todo deleted");
 
