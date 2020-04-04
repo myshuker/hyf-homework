@@ -63,15 +63,12 @@ class GetTodoList extends React.Component {
   toDelete = (item) => {
     console.log("todo deleted");
 
-    // this code is not completed
-    // console.log(this.state.todos.length);
-    // if (this.state.todos.length === 0) {
-    //   alert("No item");
-    // }
-    const newArray = this.state.todos.filter((oneTodo) => oneTodo.id !== item);
-    this.setState({ todos: newArray });
-  };
-
+   this code is not completed
+  console.log(this.state.todos.length);
+  if (this.state.todos.length === 0) {
+     alert("No item");
+     }
+    
   render() {
     const newTodoItem = this.state.todos.map((todo) => (
       <div>
