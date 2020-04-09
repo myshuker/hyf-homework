@@ -1,91 +1,126 @@
 import React from "react";
 
-const todoListArr = [
-  {
-    id: 1,
-    description: "Get out of bed",
-  },
-  {
-    id: 2,
-    description: "Brush teeth",
-  },
-  {
-    id: 3,
-    description: "Eat breakfast",
-  },
-  {
-    id: 4,
-    description: "Go the work",
-  },
-  {
-    id: 5,
-    description: "Come home",
-  },
-];
+// Start TodoItems Component
+const TodoItems = (props) => {
+  console.log(props);
+  const { items, deleteItem, todoCompleted } = props;
+  const length = items.length;
+    const showItems = length ? (
+    items.map((item) => {
+      return (
+        <div>          
+        <li key={item.id} style={{ textDecoration: item.completed ? "line-through" : "none" }}>
+          {item.description}
+          {/* <input type="checkbox" checked={item.completed} onChange={todoCompleted} /> */}
+          <input type="checkbox" checked={item.completed} onChange={() => todoCompleted(item.id)} />
+          <button onClick={() => deleteItem(item.id)}>Delete</button>
+        </li>
+        </div>
+      );
+    })
+  ) : (
+    <p>NO items to show</p>
+  );
+  return <div>{showItems}</div>;
+};
 
-class GetTodoList extends React.Component {
+// END TodoItems Component
+
+class App extends React.Component {
   state = {
-    todos: [],
+    todos: [
+      {
+        id: 1,
+        description: "Get out of bed",
+        completed: false,
+      },
+      {
+        id: 2,
+        description: "Brush teeth",
+        completed: false,
+      },
+      {
+        id: 3,
+        description: "Eat breakfast",
+        completed: false,
+      },
+      {
+        id: 4,
+        description: "Go the work",
+        completed: false,
+      },
+      {
+        id: 5,
+        description: "Come home",
+        completed: false,
+      },
+    ],
   };
 
-  addTodo = () => {
-    console.log(todoListArr);
-    console.log(todoListArr.length);
+  // first way to delete
+  //  deleteItem = (id) => {
+  //   console.log(id);
+  //   let items = this.state.todos;
+  //   let index = items.findIndex((item) => item.id === id);
+  //   items.splice(index, 1);
+  //   this.setState({ todos: items, });
+  // };
 
-    const randomNumber = Math.floor(Math.random() * 10);
-    console.log(randomNumber);
-
-    if (randomNumber < todoListArr.length) {
-      const randomItem = todoListArr[randomNumber].description;
-      console.log(randomItem);
-
-      const newTodo = this.state.todos.concat(randomItem);
-      this.setState({ todos: newTodo }, () => {
-        console.log("New todo has been added");
-        todoListArr.splice(randomNumber, 1);
-      });
-    } else {
-      console.log("item not found");
-      const newText = "random text";
-      const newTodoText = this.state.todos.concat(newText);
-      this.setState({ todos: newTodoText }, () => {
-        console.log("New todo text has been added");
-      });
-    }
+  // another way to delete
+  deleteItem = (id) => {
+    console.log(id);
+    let items = this.state.todos.filter((item) => {
+      return item.id !== id;
+    });
+    this.setState({
+      todos: items,
+    });
   };
 
-  // this code is not completed
-  checkboxFunc = () => {
-    console.log("checked");
-    /*  style={{ textDecorationLine: 'line-through' }} */
+  
+  todoCompleted = (id) => {
+    console.log(id);
+    let items = this.state.todos.map(item => {
+      if (item.id === id) {
+        return {
+          ...item,
+          completed: !item.completed,
+        };
+      } else {
+        return item;
+      }
+    });
+    this.setState({
+      todos: items,
+    });
   };
 
- // this code is not completed
-  toDelete = (item) => {
-    console.log("todo deleted");
+  handleAdd = () => {
+    console.log("hello");
+    const randomId = Math.random();
+    const newItem = {
+      id: randomId,
+      description: "random Todo",
+      completed: false,
+    };
+    const newList = [...this.state.todos, newItem];
+    this.setState({
+      todos: newList,
+    });
+  };
 
-   this code is not completed
-  console.log(this.state.todos.length);
-  if (this.state.todos.length === 0) {
-     alert("No item");
-     }
-    
   render() {
-    const newTodoItem = this.state.todos.map((todo) => (
-      <div>
-        {todo}
-        <input type="checkBox" onClick={this.checkboxFunc} />
-        <button onClick={this.toDelete}>Delete</button>
-      </div>
-    ));
     return (
       <div>
-        <button onClick={this.addTodo}>Add todo</button>
-        <br />
-        {newTodoItem}
+        <input type="button" value="Add Todo" onClick={this.handleAdd} />
+        <TodoItems
+          items={this.state.todos}
+          deleteItem={this.deleteItem}
+          todoCompleted={this.todoCompleted}
+        />
       </div>
     );
   }
 }
 
-export default GetTodoList;
+export default App;
