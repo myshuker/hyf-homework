@@ -23,7 +23,7 @@ class App extends React.Component {
 
   deleteItem =(id) =>{
     console.log(id);
-    let items = this.state.todos.filter((item) => {
+    const items = this.state.todos.filter((item) => {
       return item.id !== id;
     });
     this.setState({
