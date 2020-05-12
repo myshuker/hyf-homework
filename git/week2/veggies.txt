@@ -1,5 +1,7 @@
 carrot
 broccoli
-cucumber
+tomato
 cauliflower
 corn
+green pepper
+mushrooms
