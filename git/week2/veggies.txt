@@ -1,5 +1,7 @@
 1-carrot
 2-broccoli
-3-asparagus
+3-cucumber
 4-cauliflower
 5-corn
+6-lettuce
+7-mushrooms
