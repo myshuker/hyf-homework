@@ -1,5 +1,7 @@
 broccoli
 potatoes
-oniones
+lettuce
 pumpkin
 tomato
+asparagus
+cauliflower
