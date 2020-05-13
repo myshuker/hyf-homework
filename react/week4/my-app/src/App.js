@@ -17,7 +17,7 @@ class App extends React.Component {
     handelUserSearch =(e)=>{
       const inputValue = this.state.inputValue;
         if(inputValue){
-          FetchUsers(inputValue) 
+          fetchUsers(inputValue) 
           .then(body=>{  
             console.log(body)    
             this.setState({       
