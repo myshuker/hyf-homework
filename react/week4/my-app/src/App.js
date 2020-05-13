@@ -19,7 +19,6 @@ class App extends React.Component {
         if(inputValue){
           fetchUsers(inputValue) 
           .then(body=>{  
-            console.log(body)    
             this.setState({       
               users: body.items,      
               isLoading: false     
