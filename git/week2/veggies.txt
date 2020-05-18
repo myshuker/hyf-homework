@@ -1,5 +1,10 @@
 broccoli.
 corn.
+pumpkin
+lettuce.
+pumpkin.
+beetroot.
+brussel sprouts
 Capsicum annuum.
 lettuce.
 pumpkin.
