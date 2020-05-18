@@ -1,5 +1,7 @@
 broccoli.
 corn.
-tomato.
+pumpkin
 lettuce.
 pumpkin.
+beetroot.
+brussel sprouts
